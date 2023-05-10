@@ -1,0 +1,16 @@
+const [state,setSome] = useState(mayBeAFunction)
+setSome(someFunction)
+
+ - 该hook需要在组件的顶层使用
+ - re-render
+ - 可以通过改变组件的 key 属性值重新挂载组件
+ - 多个 setSome 只会触发一次 render
+ - 相同的state不会触发re-render
+ - 确保 mayBeAFunction,(someFunction)是一个纯函数
+ - 如果要在render时触发setSome，确保setSome要在某个条件才能触发，避免loop
+
+
+
+React 18  - https://zhuanlan.zhihu.com/p/491089782
+   - useDeferredValue ~= startTransition ~= useTransition
+ 
